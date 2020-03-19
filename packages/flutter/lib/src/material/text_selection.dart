@@ -57,7 +57,10 @@ class _TextSelectionToolbar extends StatelessWidget {
       elevation: 1.0,
       child: Container(
         height: _kToolbarHeight,
-        child: Row(mainAxisSize: MainAxisSize.min, children: items),
+        child : SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(mainAxisSize: MainAxisSize.min, children: items),
+        ),
       ),
     );
   }
